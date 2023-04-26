@@ -3,6 +3,8 @@ const  http=require("http");
 
 const url=require('url');
 
+const replaceTemplate=require('./modules/replaceTemplate');
+
 
 ////////////////////////FILE SYTEM
 // const out=fs.readFileSync("./txt/input.txt","utf-8");
@@ -27,21 +29,7 @@ const url=require('url');
 // })
 
 //////////////////////HTTP  
-const replaceTemplate=(temp,product)=>{
 
-    let output=temp.replace(/{%PRODUCTNAME%}/g,product.productName);
-    output=output.replace(/{%IMAGE%}/g,product.image);
-    output=output.replace(/{%FROM%}/g,product.from);
-    output=output.replace(/{%NUTRIENTS%}/g,product.nutrients);
-    output=output.replace(/{%QUANTITY%}/g,product.quantity);
-    output=output.replace(/{%PRICE%}/g,product.price);
-    output=output.replace(/{%DESCRIPTION%}/g,product.description);
-    output=output.replace(/{%ID%}/g,product.id);
-
-    if(!product.organic) output=output.replace(/{%NOT_ORGANIC%}/g,'not-organic');
-   
-    return output;
-}
 
 
 const tempOverview=fs.readFileSync(`${__dirname}/templates/template-Overview.html`,'utf-8');
