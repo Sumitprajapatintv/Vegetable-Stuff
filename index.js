@@ -6,29 +6,7 @@ const url=require('url');
 const replaceTemplate=require('./modules/replaceTemplate');
 
 
-////////////////////////FILE SYTEM
-// const out=fs.readFileSync("./txt/input.txt","utf-8");
 
-// fs.writeFileSync("output.txt","Hello There");
-// console.log(out);
-
-
-// fs.readFile('./txt/start.txt','utf-8',(error,data)=>{
-    
-//     fs.readFile(`./txt/${data}.txt`,'utf-8',(error,data1)=>{
-//         console.log(data1);
-//         fs.readFile('./txt/append.txt','utf-8',(error,data2)=>{
-//             console.log(data2);
-//             fs.writeFile('./txt/final.txt',`${data1}\n${data2}`,'utf-8',error=>{
-//                 console.log("Your File Has Been Written");
-//               })
-        
-//          })
-        
-//         })
-// })
-
-//////////////////////HTTP  
 
 
 
